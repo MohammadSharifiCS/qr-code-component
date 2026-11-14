@@ -1,0 +1,110 @@
+/* ----------------- */
+/* Custom properties */
+/* ----------------- */
+:root {
+    --clr-slate-300: 212 45% 89%;
+    --clr-slate-500: 216 15% 48%;
+    --clr-slate-900: 218 44% 22%;
+    --clr-white: 0 0% 100%;
+}
+
+/* --------------- */
+/*      RESET      */
+/* --------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins and padding */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Set up the body */
+body {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5;
+}
+
+/* Remove animations for people who've turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Layout */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: 100vh;
+    background-color: hsl(var(--clr-slate-300));
+}
+
+.card {
+    background-color: hsl(var(--clr-white));
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: min(320px, 90%);
+}
+
+
+#outfit-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin-block-end: 10px;
+}
+
+
+#outfit-description {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#qr-code {
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+}
+
+@media (width < 426px) {
+    .card {
+        width: 90%;
+    }
+}
+
+.attribution {
+    text-align: center;
+}
